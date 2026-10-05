@@ -1,6 +1,6 @@
 /**
- * @license
- * SPDX-License-Identifier: Apache-2.0
+ * Copyright (c) 2026 A² Dev
+ * Licensed under the MIT License.
  */
 
 import React, { useState, useEffect, useRef } from 'react';
