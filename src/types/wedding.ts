@@ -4,7 +4,7 @@ export interface WishItem {
   msg: string;
   time: string;
   likes: number;
-  attended?: 'hadir' | 'tidak' | 'ragu';
+  attended?: 'hadir' | 'tidak';
 }
 
 export interface GalleryPhoto {
@@ -12,7 +12,7 @@ export interface GalleryPhoto {
   src: string;
   caption: string;
   title: string;
-  category: 'all' | 'intimate' | 'portrait' | 'landscape';
+  category: 'all' | 'intimate' | 'portrait' | 'landscape' | 'outdoor' | 'candid';
   spanClass?: string;
 }
 
@@ -28,7 +28,7 @@ export interface RsvpRecord {
   id: string;
   name: string;
   pax: number;
-  status: 'Hadir' | 'Tidak Hadir' | 'Masih Ragu';
+  status: 'Hadir' | 'Tidak Hadir';
   message?: string;
   timestamp: string;
 }

@@ -41,7 +41,9 @@ export const GuestPassModal: React.FC<GuestPassModalProps> = ({
         </div>
 
         <div className="font-cormorant text-2xl tracking-wider text-[#f3e5ab] mt-1">
-          Aidil <span className="font-cursive text-[#e6ca65] text-2xl">&amp;</span> Talitha
+          {WEDDING_DATA.couple.groom.nickname}{' '}
+          <span className="font-cursive text-[#e6ca65] text-2xl">&amp;</span>{' '}
+          {WEDDING_DATA.couple.bride.nickname}
         </div>
 
         {/* Ticket Body */}
@@ -50,7 +52,7 @@ export const GuestPassModal: React.FC<GuestPassModalProps> = ({
             Undangan Eksklusif
           </span>
           <h4 className="font-serif-luxury text-lg text-[#f3e5ab] font-medium tracking-wide mb-3">
-            {guestName || 'Tamu Undangan Istimewa'}
+            {guestName || 'Nama Tamu Undangan'}
           </h4>
 
           {/* QR Code Container */}

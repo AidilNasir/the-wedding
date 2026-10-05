@@ -17,7 +17,7 @@ export const GiftRsvpSection: React.FC<GiftRsvpSectionProps> = ({ onNewRsvp, rsv
   // Form states
   const [name, setName] = useState('');
   const [pax, setPax] = useState('1');
-  const [attend, setAttend] = useState<'Hadir' | 'Tidak Hadir' | 'Masih Ragu'>('Hadir');
+  const [attend, setAttend] = useState<'Hadir' | 'Tidak Hadir'>('Hadir');
   const [notes, setNotes] = useState('');
   const [submittedRsvp, setSubmittedRsvp] = useState(false);
 
@@ -60,7 +60,7 @@ export const GiftRsvpSection: React.FC<GiftRsvpSectionProps> = ({ onNewRsvp, rsv
 
     // Prepare WhatsApp message
     const waText = encodeURIComponent(
-      `Halo Aidil & Talitha,\n\nSaya ingin konfirmasi kehadiran pada acara pernikahan kalian:\n` +
+      `Halo ${WEDDING_DATA.couple.groom.nickname} & ${WEDDING_DATA.couple.bride.nickname},\n\nSaya ingin konfirmasi kehadiran pada acara pernikahan:\n` +
         `• Nama: ${name.trim()}\n` +
         `• Jumlah Tamu: ${pax} Orang\n` +
         `• Status Kehadiran: ${attend}\n` +
@@ -69,7 +69,7 @@ export const GiftRsvpSection: React.FC<GiftRsvpSectionProps> = ({ onNewRsvp, rsv
     );
 
     // Open WhatsApp in new tab
-    window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+    window.open(`https://wa.me/?text=${waText}`, '_blank');
   };
 
   return (
@@ -276,17 +276,6 @@ export const GiftRsvpSection: React.FC<GiftRsvpSectionProps> = ({ onNewRsvp, rsv
                       className="accent-[#d4af37]"
                     />
                     <span className="text-xs text-[#f9f8f5] font-medium">Ya, Saya akan hadir</span>
-                  </label>
-                  <label className="flex items-center gap-3 p-3 rounded-xl bg-[#121216]/60 border border-[#252530]/80 cursor-pointer hover:border-[#d4af37]/40 transition-colors">
-                    <input
-                      type="radio"
-                      name="rsvpAttend"
-                      value="Masih Ragu"
-                      checked={attend === 'Masih Ragu'}
-                      onChange={() => setAttend('Masih Ragu')}
-                      className="accent-[#d4af37]"
-                    />
-                    <span className="text-xs text-[#f3e5ab]">Masih Ragu / Menyesuaikan Jadwal</span>
                   </label>
                   <label className="flex items-center gap-3 p-3 rounded-xl bg-[#121216]/60 border border-[#252530]/80 cursor-pointer hover:border-[#d4af37]/40 transition-colors">
                     <input

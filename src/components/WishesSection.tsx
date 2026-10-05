@@ -17,7 +17,7 @@ export const WishesSection: React.FC = () => {
 
   const [name, setName] = useState('');
   const [msg, setMsg] = useState('');
-  const [attendanceTag, setAttendanceTag] = useState<'hadir' | 'tidak' | 'ragu'>('hadir');
+  const [attendanceTag, setAttendanceTag] = useState<'hadir' | 'tidak'>('hadir');
   const [currentPage, setCurrentPage] = useState(1);
   const [likedIds, setLikedIds] = useState<Record<string, boolean>>({});
 

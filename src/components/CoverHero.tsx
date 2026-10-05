@@ -20,11 +20,11 @@ export const CoverHero: React.FC<CoverHeroProps> = ({ isOpen, onOpen, guestName 
       <div className="absolute inset-0 z-0">
         <img
           src={WEDDING_DATA.images.heroCover}
-          alt="Aidil & Talitha"
-          className="w-full h-full object-cover object-center scale-105 transition-transform duration-[10000ms] hover:scale-110"
+          alt="Wedding Couple"
+          className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.05] scale-105 transition-transform duration-[10000ms] hover:scale-110"
         />
-        <div className="absolute inset-0 vignette-overlay"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-[#0a0a0c]/80"></div>
+        <div className="absolute inset-0 vignette-overlay opacity-40"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c]/85 via-transparent to-[#0a0a0c]/45"></div>
       </div>
 
       {/* Content Center */}
@@ -38,7 +38,9 @@ export const CoverHero: React.FC<CoverHeroProps> = ({ isOpen, onOpen, guestName 
 
         {/* Main Couple Name */}
         <h1 className="font-cormorant text-5xl md:text-7xl lg:text-8xl font-light tracking-wide text-[#f9f8f5] mb-4 drop-shadow-2xl">
-          Aidil <span className="font-cursive text-[#e6ca65] text-5xl md:text-7xl mx-1">&amp;</span> Talitha
+          {WEDDING_DATA.couple.groom.nickname}{' '}
+          <span className="font-cursive text-[#e6ca65] text-5xl md:text-7xl mx-1">&amp;</span>{' '}
+          {WEDDING_DATA.couple.bride.nickname}
         </h1>
 
         {/* Date */}
@@ -52,7 +54,7 @@ export const CoverHero: React.FC<CoverHeroProps> = ({ isOpen, onOpen, guestName 
             Kepada Yth. Bapak/Ibu/Saudara/i
           </p>
           <p className="text-base md:text-lg font-serif-luxury text-[#f3e5ab] font-medium tracking-wide">
-            {guestName || 'Tamu Undangan Istimewa'}
+            {guestName || 'Nama Tamu Undangan'}
           </p>
           <p className="text-[10px] text-[#d5d3ce]/50 mt-1 italic">
             *Mohon maaf bila ada kesalahan penulisan nama/gelar

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { X, Copy, Check, Share2, MessageCircle } from 'lucide-react';
 
+import { WEDDING_DATA } from '../data/weddingData';
+
 interface ShareInviteModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -26,8 +28,8 @@ export const ShareInviteModal: React.FC<ShareInviteModalProps> = ({
   const shareText =
     `Kepada Yth. ${targetName.trim() || 'Bapak/Ibu/Saudara/i'},\n\n` +
     `Tanpa mengurangi rasa hormat, perkenankan kami mengundang Anda untuk menghadiri acara pernikahan kami:\n\n` +
-    `Aidil & Talitha\n` +
-    `📅 Sabtu, 10 Oktober 2026\n\n` +
+    `${WEDDING_DATA.couple.groom.nickname} & ${WEDDING_DATA.couple.bride.nickname}\n` +
+    `📅 ${WEDDING_DATA.dates.heroDisplay}\n\n` +
     `Untuk melihat detail informasi acara dan konfirmasi kehadiran, silakan kunjungi tautan undangan online berikut:\n` +
     `${customUrl}\n\n` +
     `Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.\n\n` +

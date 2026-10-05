@@ -33,7 +33,9 @@ export const FooterSection: React.FC = () => {
           Kami yang berbahagia,
         </p>
         <h3 className="font-cormorant text-3xl md:text-4xl text-[#f9f8f5] font-light tracking-wide">
-          Aidil <span className="font-cursive text-[#e6ca65] text-3xl">&amp;</span> Talitha
+          {WEDDING_DATA.couple.groom.nickname}{' '}
+          <span className="font-cursive text-[#e6ca65] text-3xl">&amp;</span>{' '}
+          {WEDDING_DATA.couple.bride.nickname}
         </h3>
         <p className="text-xs text-[#d5d3ce]/50 mt-1">Beserta Seluruh Keluarga Besar</p>
 
@@ -45,9 +47,14 @@ export const FooterSection: React.FC = () => {
           <span>Kembali ke Atas</span>
         </button>
 
-        <p className="text-[10px] tracking-widest text-[#d5d3ce]/40 uppercase mt-12">
-          © 2026 The Wedding of Aidil &amp; Talitha • Designed with Elegance
-        </p>
+        <div className="mt-12 pt-6 border-t border-[#252530]/40 w-full max-w-md">
+          <p className="text-xs md:text-sm tracking-widest text-[#d5d3ce]/80 font-light flex items-center justify-center gap-2">
+            <span>Design by</span>
+            <span className="text-[#f3e5ab] font-serif-luxury font-semibold text-sm md:text-base tracking-wider">
+              A² Dev
+            </span>
+          </p>
+        </div>
       </div>
     </footer>
   );
